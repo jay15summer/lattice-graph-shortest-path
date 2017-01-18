@@ -1,5 +1,5 @@
 # lattice-grids-shortest-path
-Description: <br />
+## Description
 <pre>The program solves the shortest-path problem for a 2D lattice grids which can be represented by a matrix.
 For example, a 4-by-4 lattice grids can be represented by a 4-by-4 matrix. 
 (One entry corresponds to one grid point).
@@ -16,7 +16,7 @@ by the entry value j,(i.e. weight function is wf = @(i,j)(0.*i + 1.*j)).
 We can easily find out that the shortest-path traveling from node(1,1) to
 node(4,4) is (1,1)-->(2,1)-->(3,1)-->(3,2)-->(3,3)-->(3,4)-->(4,4), the
 total distance is 6+1+5+2+2+1=17.
-This function will solve the problem and give the following results: 
+The above problem can be solved by this program giving the following result:  
 Path = [1     4     7     6;
         |
         V
@@ -28,12 +28,12 @@ Path = [1     4     7     6;
                           V
         1     4     6     1];
 
-This kind of problems can be solved by this function. </pre>
+Other similar shortest-path problems can also be solved by this program. </pre>
 ## Installation
 Download and add 'gridmatrixshortestpath.m' and 'main.m' to your path (folder). 
 ## Usage
 1. 'gridmatrixshortestpath.m': <br />
-   a matlab function to solve shortest-path problems for lattice grids in a matrix format<br />
+   a matlab function to solve shortest-path problems for lattice grids in a matrix format. <br />
 <pre>Input: 
       GridMatrix: A matrix representing the lattice grids (m-by-n)
       wf:         Weight fucntion to calculate the arc length traveling
@@ -46,5 +46,5 @@ Output:
      pos_in_M: the shortest-path (q-by-2-by-p)</pre>
 
 2. 'main.m': <br />
-   an example of how to implement gridmatrixshortestpath.m
+   an example/demo of how to implement gridmatrixshortestpath.m. 
 
