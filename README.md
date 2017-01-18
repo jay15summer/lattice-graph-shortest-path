@@ -5,13 +5,13 @@
 2. main.m: <br />
    an example of how to implement gridmatrixshortestpath.m
 3. Description:<br />
-The program solves the shortest-path problem for a 2D lattice grids which can be represented by a matrix.<br />
+<pre>The program solves the shortest-path problem for a 2D lattice grids which can be represented by a matrix.<br />
 For example, a 4-by-4 lattice grids can be represented by a 4-by-4 matrix. (One entry corresponds to one grid point).<br />
 At every grid point, one can travel to its up/down/left/right side grid point, the arc-length (weight) between<br />
 the neightboring grids is calculated by a function of the entry values in the corresponding matrix.<br />
 Assume the matrix is <br />
 Matrix = [1 4 7 6;<br />
-<pre><pre>          6 5 4 3;<br />
+          6 5 4 3;<br />
           1 5 2 2;<br />
           1 4 6 1];<br />
 Also assume the traveling cost from entry i to entry i is only determined 
