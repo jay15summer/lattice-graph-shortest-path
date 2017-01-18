@@ -28,7 +28,7 @@ Path = [1     4     7     6;
                           V
         1     4     6     1];
 
-This kind of problems can be solved by this function. <pre />
+This kind of problems can be solved by this function. </pre>
 ## Installation
 Download and add 'gridmatrixshortestpath.m' and 'main.m' to your path (folder). 
 ## Usage
@@ -43,7 +43,7 @@ Download and add 'gridmatrixshortestpath.m' and 'main.m' to your path (folder).
 --------------------------------------------------------------------------
 Output:
      dist:     the shortet distance between start and stop (p-by-1)
-     pos_in_M: the shortest-path (q-by-2-by-p)<pre />
+     pos_in_M: the shortest-path (q-by-2-by-p)</pre>
 
 2. 'main.m': <br />
    an example of how to implement gridmatrixshortestpath.m
