@@ -11,7 +11,7 @@ At every grid point, one can travel to its up/down/left/right side grid point, t
 the neightboring grids is calculated by a function of the entry values in the corresponding matrix.<br />
 Assume the matrix is <br />
 Matrix = [1 4 7 6;<br />
-          6 5 4 3;<br />
+<pre><pre>          6 5 4 3;<br />
           1 5 2 2;<br />
           1 4 6 1];<br />
 Also assume the traveling cost from entry i to entry i is only determined 
