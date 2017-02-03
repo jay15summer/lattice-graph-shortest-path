@@ -1,6 +1,7 @@
 # lattice-graph-shortest-path
 ## Description
-<pre>The program solves the shortest-path problem for a 2D lattice graph (grid graph) which can be represented by a matrix.
+<pre>The program solves the shortest-path problem for a 2D lattice graph (grid graph)
+which can be represented in a matrix format. 
 For example, a 4-by-4 lattice graph can be represented by a 4-by-4 matrix. 
 (One entry corresponds to one grid point of the lattice graph).
 At every grid point, one can travel to its up/down/left/right side grid point.
@@ -16,7 +17,8 @@ by the entry value j,(e.g., weight function is wf = @(i,j)(0.*i + 1.*j)).
 We can quickly find out that the shortest-path traveling from node(1,1) to
 node(4,4) is (1,1)-->(2,1)-->(3,1)-->(3,2)-->(3,3)-->(3,4)-->(4,4), the
 total traveling distance is 6+1+5+2+2+1=17.
-The above type of problem can be solved by this program conveniently. See the following result:  
+The above type of problem can be solved by this program conveniently.
+See the following result:  
 Path = [1     4     7     6;
         |
         V
