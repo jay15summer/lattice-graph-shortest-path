@@ -1,7 +1,7 @@
 function [dist,pos_in_M]=gridmatrixshortestpath(GridMatrix,start,stop,wf)
 %--------------------------------------------------------------------------
-%This function solves the shortest-path problem for a 2D lattice grids
-%which can be represented by a matrix. For example, a 4-by-4 lattice grids
+%This function solves the shortest-path problem for a 2D lattice grids graph
+%which can be represented by a matrix. For example, a 4-by-4 lattice graph
 %can be represented by a 4-by-4 matrix. (One entry corresponds to one grid point)
 %At every grid point, one can travel
 %to its up/down/left/right side grid point, the arc-length (weight) between
@@ -11,15 +11,15 @@ function [dist,pos_in_M]=gridmatrixshortestpath(GridMatrix,start,stop,wf)
 %          6 5 4 3;
 %          1 5 2 2;
 %          1 4 6 1]; 
-%Also assume the traveling cost from entry i to entry i is only determined 
+%Also assume the traveling cost from entry i to entry j is only determined 
 %by the entry value j,(wf = @(i,j)(0.*i + 1.*j)). 
-%We can easily find out that the shortest-path traveling from node(1,1) to
+%We can quickly find out that the shortest-path traveling from node(1,1) to
 %node(4,4) is (1,1)-->(2,1)-->(3,1)-->(3,2)-->(3,3)-->(3,4)-->(4,4), the
 %total distance is 6+1+5+2+2+1=17. (validated in Main.m). 
 %This kind of problems can be solved by this function. 
 %--------------------------------------------------------------------------
 %Input: 
-%      GridMatrix: A matrix representing the lattice grids (m-by-n)
+%      GridMatrix: A matrix representing the lattice graph (m-by-n)
 %      wf:         Weight fucntion to calculate the arc length traveling
 %                  between neighboring grids
 %      start/stop: the indexes of start and target grid points
@@ -35,7 +35,7 @@ end
 
 w = size(GridMatrix, 1); l = size(GridMatrix, 2);
 if w < 2|| l < 2
-    error('size of the (lattice grids) matrix is too small. Need to be bigger than 2.');
+    error('size of the (lattice graph) matrix is too small. Need to be bigger than 2.');
 end
 
 if size(start,1)~=size(stop,1)||size(start,2)~=size(stop,2)
