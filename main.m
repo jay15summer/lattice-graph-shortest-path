@@ -1,7 +1,7 @@
 %main and demo
 %Here is an example of how to use the gridmatrixshortestpath.m
 clear; close all; 
-%% 1. Assume a lattice grids (Matrix)
+%% 1. Assume a lattice grids graph (Matrix)
 Matrix1 = [1 4 7 6;
            6 5 4 3;
            1 5 2 2;
@@ -23,7 +23,7 @@ view(0,90); set(gca,'ytick',0:size(Matrix1,1),'xtick',0:size(Matrix1,2));hold on
 pathresult1 = path1.path;
 tmp = pathresult1(:,1); 
 pathresult1(:,1) = pathresult1(:,2);
-pathresult1(:,2) = size(Matrix1, 1)-tmp+1;%convert position in matrix to position in graph.
+pathresult1(:,2) = size(Matrix1, 1)-tmp+1;%convert position in matrix to position in graph
 %================
 for i = 1:(size(pathresult1,1)-1)
     p1 = pathresult1(i, :);
